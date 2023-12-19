@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDataService", "MasterDataService\MasterDataService.csproj", "{79B6777C-2C24-4EF2-B50C-58018FEBBD97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionService", "TransactionService\TransactionService.csproj", "{B7417AB1-0187-407C-A705-28A8A3E688E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79B6777C-2C24-4EF2-B50C-58018FEBBD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B6777C-2C24-4EF2-B50C-58018FEBBD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B6777C-2C24-4EF2-B50C-58018FEBBD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B6777C-2C24-4EF2-B50C-58018FEBBD97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7417AB1-0187-407C-A705-28A8A3E688E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7417AB1-0187-407C-A705-28A8A3E688E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7417AB1-0187-407C-A705-28A8A3E688E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7417AB1-0187-407C-A705-28A8A3E688E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67EAA362-21B6-473E-A717-F78809168106}
+	EndGlobalSection
+EndGlobal
