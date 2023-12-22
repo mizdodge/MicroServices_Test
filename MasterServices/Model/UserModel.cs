@@ -12,6 +12,9 @@ namespace MasterServices.Model
         public String Firstname { get; set; }
         public String Lastname { get; set; }
         public String Password { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Postalcode { get; set; }
         public bool IsAdmin { get; set; }
     }
 }

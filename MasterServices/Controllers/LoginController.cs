@@ -31,12 +31,18 @@ namespace MasterServices.Controllers
         }
 
         // GET auth/<LoginController>/5
-        //[HttpPost("{username}")]
-        //public IActionResult Get(string username, string password)
-        //{
-            
-        //}
-        // POST auth/<LoginController>
+        [HttpPost("{username}")]
+        public IActionResult Get(string username)
+        {
+            var getData = (from x in AppDbContext.UserMaster where x.Username == username select x).FirstOrDefault();
+
+            if (getData != null) {
+                return Ok(new { status = "500", message = "Username already exist" });
+            }
+            else {
+                return Ok(new { status = "200", message = "OK" });
+            }
+        }
         [HttpPost]
         public IActionResult Post(UserModel userData)
         {
