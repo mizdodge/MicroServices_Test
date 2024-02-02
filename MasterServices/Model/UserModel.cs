@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace MasterServices.Model
+namespace MyProjectBE.Model
 {
     public class UserModel
     {
-        public Guid ID { get; set; }
-        public String Username { get; set; }
-        public String Firstname { get; set; }
-        public String Lastname { get; set; }
-        public String Password { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Postalcode { get; set; }
-        public bool IsAdmin { get; set; }
+        [Key]
+        public long UserID{get;set;}
+        public string Username {get;set;}
+        public string Password {get;set;}
     }
 }

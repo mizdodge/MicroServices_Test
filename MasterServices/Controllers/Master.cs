@@ -1,8 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MasterServices.Model;
+using MyProjectBE.Model;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MasterServices.Data;
+using Microsoft.Extensions.Configuration;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,6 +17,14 @@ namespace MasterServices.Controllers
     [ApiController]
     public class Master : ControllerBase
     {
+        public IConfiguration Configuration;
+        public ApplicationDbContext AppDbContext { get; set; }
+
+        public Master(IConfiguration configuration, ApplicationDbContext appDbContext)
+        {
+            AppDbContext = appDbContext;
+            Configuration = configuration;
+        }
         // GET: api/<Master>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -21,9 +34,12 @@ namespace MasterServices.Controllers
 
         // GET api/<Master>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            
+            List<UserModel> user = AppDbContext.User.Where(x=>x.UserID == Convert.ToInt64(id)).ToList();
+            
+            return Ok(new { RESULT = "OK", user });
         }
 
         // POST api/<Master>
@@ -47,7 +63,9 @@ namespace MasterServices.Controllers
         [HttpGet("GetListItems")]
         public IActionResult GetAllListItems()
         {
-            return Ok(new { test1 = "hehehe", test2 = "hahaha" });
+            List<UserModel> user = AppDbContext.User.ToList();
+            
+            return Ok(new { RESULT = "OK", user });
         }
     }
 }
